@@ -2,4 +2,4 @@
 
 My solutions for Advent of Code 2015, written in Kotlin
 
-
+![](docs/img/aoc.jpg)
