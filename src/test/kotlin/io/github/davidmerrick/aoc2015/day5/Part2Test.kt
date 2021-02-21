@@ -19,27 +19,33 @@ class Part2Test {
     fun `Check unique pairs`() {
         val input = "aabcdefgaa"
         getPairs(input) shouldContain "aa"
-        uniquePairCount(input) shouldBe 1
+        pairCount(input) shouldBe 1
     }
 
     @Test
     fun `Check unique pairs 2`() {
         val input = "qjhvhtzxzqqjkmpb"
         getPairs(input) shouldContain "qj"
-        uniquePairCount(input) shouldBe 1
+        pairCount(input) shouldBe 1
     }
 
     @Test
     fun `Check unique pairs 3`() {
         val input = "uurcxstgmygtbstg"
         getPairs(input) shouldContain "tg"
-        uniquePairCount(input) shouldBe 2
+        pairCount(input) shouldBe 2
     }
 
     @Test
     fun `Check unique pairs 4`() {
         val input = "ieodomkazucvgmuy"
-        uniquePairCount(input) shouldBe 0
+        pairCount(input) shouldBe 0
+    }
+
+    @Test
+    fun `Check unique pairs 5`() {
+        val input = "ieodoaaazucvgmuy"
+        pairCount(input) shouldBe 0
     }
 
     @Test

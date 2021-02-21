@@ -20,7 +20,11 @@ fun getPairs(input: String): Set<String> {
     return pairs.toSet()
 }
 
-fun uniquePairCount(input: String): Int {
+/**
+ * Returns number of non-overlapping
+ * pairs in the string
+ */
+fun pairCount(input: String): Int {
     var pairCount = 0
     getPairs(input).forEach {
         if (input.contains(it)) {
@@ -32,7 +36,7 @@ fun uniquePairCount(input: String): Int {
 }
 
 fun String.isNicePart2(): Boolean {
-    if (uniquePairCount(this) == 0)
+    if (pairCount(this) == 0)
         return false
 
     if (!sandwiches.containsMatchIn(this))
